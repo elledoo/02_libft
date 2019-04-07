@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 11:45:54 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/07 21:16:22 by esuslova         ###   ########.fr       */
+/*   Created: 2019/04/07 09:35:16 by esuslova          #+#    #+#             */
+/*   Updated: 2019/04/07 11:35:17 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char	*a;
-
-	a = b;
-	while (len--)
-		*a++ = (unsigned char)c;
-	return (b);
+	unsigned char	a;
+	char			*d;
+	const char		*s;
+	
+	d = dst;
+	s = src;
+	a = (unsigned char)c;
+	while (n-- && (*s != a))
+	{
+		*d = *s;
+		d++;
+		s++;
+	}
+	if (*s == a)
+	{
+		*d = a;
+		d++;
+		return ((void *)d);
+	}
+	else
+		return (NULL);
 }
