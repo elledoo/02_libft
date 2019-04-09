@@ -6,7 +6,7 @@
 #    By: esuslova <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/03 18:44:56 by esuslova          #+#    #+#              #
-#    Updated: 2019/04/08 21:19:18 by esuslova         ###   ########.fr        #
+#    Updated: 2019/04/09 22:16:02 by esuslova         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,9 +53,17 @@ SRCS = ft_isspace.c\
 	   ft_strmapi.c\
 	   ft_strequ.c\
 	   ft_strnequ.c\
+	   ft_strsub.c\
+	   ft_strjoin.c\
+	   ft_strtrim.c\
 	   ft_putchar.c\
 	   ft_putstr.c\
-	   ft_putnbr.c
+	   ft_putendl.c\
+	   ft_putnbr.c\
+	   ft_putchar_fd.c\
+	   ft_putstr_fd.c\
+	   ft_putendl_fd.c\
+	   ft_putnbr_fd.c
 HDR = libft.h
 OBJS = ft_isspace.o\
 	   ft_memset.o\
@@ -97,9 +105,17 @@ OBJS = ft_isspace.o\
 	   ft_strmapi.o\
 	   ft_strequ.o\
 	   ft_strnequ.o\
+	   ft_strsub.o\
+	   ft_strjoin.o\
+	   ft_strtrim.o\
 	   ft_putchar.o\
 	   ft_putstr.o\
-	   ft_putnbr.o
+	   ft_putendl.o\
+	   ft_putnbr.o\
+	   ft_putchar_fd.o\
+	   ft_putstr_fd.o\
+	   ft_putendl_fd.o\
+	   ft_putnbr_fd.o\
 
 all: $(NAME)
 
