@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_listadd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 15:29:49 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/10 20:05:13 by esuslova         ###   ########.fr       */
+/*   Created: 2019/04/10 20:55:51 by esuslova          #+#    #+#             */
+/*   Updated: 2019/04/10 21:18:05 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_listadd(t_list **alst, t_list *new)
 {
-	char	*cpy;
 
-	cpy = dst;
-	while (n-- > 0)
-		*cpy++ = *(char *)src++;
-	return (cpy);
 }
