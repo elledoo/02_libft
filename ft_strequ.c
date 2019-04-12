@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 20:12:56 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/08 20:49:45 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 20:18:13 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	if (strcmp(s1, s2))
+	if (ft_strcmp(s1, s2))
 		return (0);
 	else
 		return (1);

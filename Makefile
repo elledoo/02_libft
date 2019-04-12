@@ -6,7 +6,7 @@
 #    By: esuslova <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/03 18:44:56 by esuslova          #+#    #+#              #
-#    Updated: 2019/04/12 16:50:50 by esuslova         ###   ########.fr        #
+#    Updated: 2019/04/12 21:50:42 by esuslova         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,8 +70,8 @@ SRCS = ft_isspace.c\
 	   ft_lstnew.c\
 	   ft_lstdelone.c\
 	   ft_lstdel.c\
-	   ft_listadd.c\
-	   ft_listiter.c\
+	   ft_lstadd.c\
+	   ft_lstiter.c\
 	   ft_lstmap.c
 HDR = libft.h
 OBJS = ft_isspace.o\
@@ -130,8 +130,8 @@ OBJS = ft_isspace.o\
 	   ft_lstnew.o\
 	   ft_lstdelone.o\
 	   ft_lstdel.o\
-	   ft_listadd.o\
-	   ft_listiter.o\
+	   ft_lstadd.o\
+	   ft_lstiter.o\
 	   ft_lstmap.o\
 
 all: $(NAME)

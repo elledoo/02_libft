@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 15:00:13 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/08 15:29:44 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 21:05:34 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s);
+		f(i, &s[i]);
 		i++;
 	}
 }

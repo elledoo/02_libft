@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 20:53:45 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/08 21:19:13 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 21:50:05 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 		s2++;
 		n--;
 	}
-	if (!n || !*s1 || !*s2)
+	if (!n || (!*s1 && !*s2))
 		return (1);
 	else
 		return (0);
