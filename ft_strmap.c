@@ -6,13 +6,13 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 17:49:34 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/08 19:52:40 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 16:11:29 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char *dest;
 	char *start;

@@ -6,13 +6,13 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 13:21:49 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/08 14:44:55 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 16:09:09 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
 	while (*s)
 		f(s++);

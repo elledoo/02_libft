@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 19:35:42 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/09 19:41:43 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 16:06:50 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd((n / 10), fd);
 		ft_putnbr_fd((n % 10), fd);
 	}
-}	
+}

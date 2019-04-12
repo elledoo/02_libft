@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/06 15:22:46 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/12 16:19:18 by esuslova         ###   ########.fr       */
+/*   Created: 2019/04/11 18:54:35 by esuslova          #+#    #+#             */
+/*   Updated: 2019/04/12 16:19:49 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t		n;
-	char		*d;
-	const char	*s;
-	size_t		dlen;
+	t_list	*current;
+	t_list	*next;
 
-	d = dst;
-	s = src;
-	n = size;
-	while (n-- && *d)
-		d++;
-	dlen = d - dst;
-	n = size - dlen;
-	if (n == 0)
-		return (dlen + ft_strlen(src));
-	while (*s)
+	current = *alst;
+	while (current)
 	{
-		if (n != 1)
-		{
-			*d++ = *s;
-			n--;
-		}
-		s++;
+		next = current->next;
+		del(current->content, current->content_size);
+		free(current);
+		current = next;
 	}
-	*d = '\0';
-	return (dlen + ft_strlen(src));
+	*alst = NULL;
 }

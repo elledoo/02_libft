@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 16:11:02 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/10 17:57:22 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 16:21:49 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,12 @@ static int	ft_nb_len(int n)
 	return (i);
 }
 
-
 char		*ft_itoa(int n)
 {
-	int	len;
+	int		len;
+	char	*d;
 
 	len = ft_nb_len(n);
-	char	*d;
 	if (!(d = (char *)(malloc(sizeof(int) * (len + 1)))))
 		return (NULL);
 	d[len--] = '\0';
@@ -43,10 +42,12 @@ char		*ft_itoa(int n)
 		d[0] = '-';
 	if (n == 0)
 		d[0] = '0';
-
 	while (n)
 	{
-		n >= 0 ? (d[len] = '0' + (n % 10)) : (d[len] = '0' + ((n * -1) % 10));
+		if (n >= 0)
+			d[len] = '0' + (n % 10);
+		else
+			d[len] = '0' + ((n * -1) % 10);
 		len--;
 		n = n / 10;
 	}

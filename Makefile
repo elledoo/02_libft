@@ -6,12 +6,13 @@
 #    By: esuslova <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/03 18:44:56 by esuslova          #+#    #+#              #
-#    Updated: 2019/04/10 21:17:59 by esuslova         ###   ########.fr        #
+#    Updated: 2019/04/12 13:40:56 by esuslova         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-FLAGS = -Wall -Werror -Wextra -fsanitize=address
+FLAGS = -Wall -Werror -Wextra -fsanitize=address 
+	
 NAME = libft.a
 SRCS = ft_isspace.c\
 	   ft_memset.c\
@@ -67,7 +68,11 @@ SRCS = ft_isspace.c\
 	   ft_putendl_fd.c\
 	   ft_putnbr_fd.c\
 	   ft_lstnew.c\
-	   ft_listadd.c
+	   ft_lstdelone.c\
+	   ft_lstdel.c\
+	   ft_listadd.c\
+	   ft_listiter.c\
+	   ft_lstmap.c
 HDR = libft.h
 OBJS = ft_isspace.o\
 	   ft_memset.o\
@@ -123,7 +128,11 @@ OBJS = ft_isspace.o\
 	   ft_putendl_fd.o\
 	   ft_putnbr_fd.o\
 	   ft_lstnew.o\
-	   ft_listadd.o
+	   ft_lstdelone.o\
+	   ft_lstdel.o\
+	   ft_listadd.o\
+	   ft_listiter.o\
+	   ft_lstmap.o\
 
 all: $(NAME)
 

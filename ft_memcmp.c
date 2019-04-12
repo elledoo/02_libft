@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 14:05:50 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/07 14:43:31 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 16:05:47 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	src1 = (unsigned char *)s1;
 	src2 = (unsigned char *)s2;
-
 	while (n--)
 	{
 		if (*src1 != *src2)

@@ -6,13 +6,13 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 19:23:35 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/09 19:29:43 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 16:08:18 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char const *s, int fd)
+void	ft_putstr_fd(char const *s, int fd)
 {
 	int	size;
 
