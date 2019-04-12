@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 16:29:39 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/04 17:41:42 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 19:22:42 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int	ft_strcmp(const char *s1, const char *s2)
 	if (!(*s1) && !(*s2))
 		return (0);
 	else
-		return (*s1 - *s2);
+		return (*(const unsigned *)s1 - *(const unsigned *)s2);
 }

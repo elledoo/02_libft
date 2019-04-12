@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 15:29:49 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/10 20:05:13 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/12 17:04:18 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	cpy = dst;
 	while (n-- > 0)
 		*cpy++ = *(char *)src++;
-	return (cpy);
+	return (dst);
 }

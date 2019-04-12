@@ -6,12 +6,12 @@
 #    By: esuslova <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/03 18:44:56 by esuslova          #+#    #+#              #
-#    Updated: 2019/04/12 13:40:56 by esuslova         ###   ########.fr        #
+#    Updated: 2019/04/12 16:50:50 by esuslova         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-FLAGS = -Wall -Werror -Wextra -fsanitize=address 
+FLAGS = -Wall -Werror -Wextra 
 	
 NAME = libft.a
 SRCS = ft_isspace.c\
