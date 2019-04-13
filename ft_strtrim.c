@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 20:35:58 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/09 22:14:47 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/13 12:24:27 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ static int	ft_trim(const char *s, int beg_p)
 			w = 1;
 		i++;
 	}
+	if (!s[i] && w == 1)
+		sp = 0;
 	return (i - sp - beg_p);
 }
 

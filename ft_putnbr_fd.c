@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 19:35:42 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/13 10:13:22 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/13 10:26:18 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (nb > 9)
 		ft_putnbr_fd((nb / 10), fd);
-	ft_putchar_fd((nb + '0'), fd);
+	ft_putchar_fd(((nb % 10) + '0'), fd);
 }
