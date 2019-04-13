@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 11:08:08 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/12 16:06:25 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/13 10:11:30 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	ft_putnbr(int n)
 {
-	if (n < 0)
+	long	nb;
+
+	nb = n;
+	if (nb < 0)
 	{
 		ft_putchar('-');
-		n *= -1;
+		nb = -nb;
 	}
-	if (n < 10)
-		ft_putchar(n + '0');
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	ft_putchar('0' + (nb % 10));
 }
