@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 15:08:27 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/13 21:32:37 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/14 13:24:13 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int	len;
 
-	if (!needle)
-		return ((char *)haystack);
 	len = ft_strlen(needle);
+	if (!needle || !len)
+		return ((char *)haystack);
 	while (*haystack)
 	{
 		if (!ft_memcmp(haystack, needle, len))
