@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 12:24:40 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/06 14:17:13 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/14 21:36:56 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	res;
+	int						sign;
+	unsigned long long int	res;
 
 	sign = 1;
 	res = 0;
@@ -32,5 +32,7 @@ int	ft_atoi(const char *str)
 		res = res * 10 + (*str - '0');
 		str++;
 	}
+	if (res > 9223372036854775807)
+		return (sign == 1 ? -1 : 0);
 	return (res * sign);
 }
