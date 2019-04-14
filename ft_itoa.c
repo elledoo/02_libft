@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 16:11:02 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/13 12:06:54 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/14 17:54:27 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char		*ft_itoa(int n)
 	char	*d;
 
 	len = ft_nb_len(n);
-	if (!(d = (char *)(malloc(sizeof(int) * (len + 1)))))
+	if (!(d = (char *)(malloc(sizeof(char) * (len + 1)))))
 		return (NULL);
 	d[len--] = '\0';
 	if (n < 0)
