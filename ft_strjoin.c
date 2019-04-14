@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 18:48:33 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/09 19:04:36 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/14 17:27:06 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*d;
 	char	*r;
 
+	if (!s1 || !s2)
+		return (NULL);
 	if (!(d = (char *)(malloc(ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (NULL);
 	r = d;

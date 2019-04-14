@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 10:36:20 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/10 14:50:14 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/14 17:28:16 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		i;
 	int		j;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	j = 0;
 	w = ft_words(s, c);

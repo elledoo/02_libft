@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 13:48:10 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/12 16:18:38 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/14 17:25:51 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*d;
 	char	*res;
 
+	if (!s)
+		return (NULL);
 	if (start > ft_strlen(s))
 		return (NULL);
 	if (!(d = ft_memalloc(len + 1)))
