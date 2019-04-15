@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 19:06:39 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/09 19:10:47 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/15 13:34:13 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (s)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
 }

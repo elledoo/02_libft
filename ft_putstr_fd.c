@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 19:23:35 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/12 16:08:18 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/15 13:34:56 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ void	ft_putstr_fd(char const *s, int fd)
 {
 	int	size;
 
-	size = ft_strlen(s);
-	write(fd, s, size);
+	if (s)
+	{
+		size = ft_strlen(s);
+		write(fd, s, size);
+	}
 }

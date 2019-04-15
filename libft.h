@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:06:20 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/12 21:51:01 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/15 14:19:06 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct	s_list
 }				t_list;
 
 int				ft_isspace(int c);
+int				ft_get_words(char const *s, char c);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);

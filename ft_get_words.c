@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_get_words.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/10 18:38:23 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/15 13:43:39 by esuslova         ###   ########.fr       */
+/*   Created: 2019/04/15 13:58:08 by esuslova          #+#    #+#             */
+/*   Updated: 2019/04/15 14:06:36 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+int	ft_get_words(char const *s, char c)
 {
-	t_list *new;
+	int	in;
+	int	w;
 
-	if (!(new = (t_list *)malloc(sizeof(t_list))))
-		return (NULL);
-	if (!content)
+	w = 0;
+	in = 0;
+	if (!s)
+		return (0);
+	while (*s)
 	{
-		new->content = NULL;
-		new->content_size = 0;
-	}
-	else
-	{
-		if (!(new->content = malloc(content_size)))
+		if (*s != c)
 		{
-			free(new);
-			return (NULL);
+			if (in == 0)
+			{
+				in = 1;
+				w++;
+			}
 		}
-		ft_memcpy(new->content, content, content_size);
-		new->content_size = content_size;
+		if (*s == c)
+		{
+			if (in == 1)
+				in = 0;
+		}
+		s++;
 	}
-	new->next = NULL;
-	return (new);
+	return (w);
 }
