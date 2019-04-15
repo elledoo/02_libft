@@ -6,13 +6,12 @@
 #    By: esuslova <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/03 18:44:56 by esuslova          #+#    #+#              #
-#    Updated: 2019/04/15 17:08:55 by esuslova         ###   ########.fr        #
+#    Updated: 2019/04/15 21:35:25 by esuslova         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
-INC = libft.h	
 NAME = libft.a
 SRCS = ft_tabdel.c\
 	   ft_get_words.c\
@@ -140,7 +139,7 @@ OBJS = ft_tabdel.o\
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INC)
+$(NAME): $(OBJS) $(HDR)
 	ar rc $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
