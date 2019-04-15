@@ -6,7 +6,7 @@
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 10:36:20 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/15 14:17:52 by esuslova         ###   ########.fr       */
+/*   Updated: 2019/04/15 17:16:10 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,6 @@ static int	ft_get_char(char const *s, int start, char c)
 	while (s[start++] != c)
 		n++;
 	return (n);
-}
-
-static void	ft_free(char **d, int i)
-{
-	while (i >= 0)
-		free(d[i--]);
-	free(d);
 }
 
 char		**ft_strsplit(char const *s, char c)
@@ -47,7 +40,7 @@ char		**ft_strsplit(char const *s, char c)
 			j++;
 		if (!(d[i] = ft_strsub(&s[j], 0, ft_get_char(s, j, c))))
 		{
-			ft_free(d, i);
+			ft_tabdel(&d, i);
 			return (NULL);
 		}
 		j += ft_get_char(s, j, c);

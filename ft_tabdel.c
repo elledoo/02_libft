@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_tabdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esuslova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/08 11:06:23 by esuslova          #+#    #+#             */
-/*   Updated: 2019/04/15 17:18:03 by esuslova         ###   ########.fr       */
+/*   Created: 2019/04/15 17:04:42 by esuslova          #+#    #+#             */
+/*   Updated: 2019/04/15 17:15:21 by esuslova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_tabdel(char ***tab, int i)
 {
-	if (as)
-		ft_memdel((void *)as);
+	while (i >= 0)
+		ft_strdel(tab[i]);
+	free(*tab);
+	tab = NULL;
 }

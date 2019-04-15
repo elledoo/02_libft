@@ -6,7 +6,7 @@
 #    By: esuslova <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/03 18:44:56 by esuslova          #+#    #+#              #
-#    Updated: 2019/04/15 14:02:20 by esuslova         ###   ########.fr        #
+#    Updated: 2019/04/15 17:08:55 by esuslova         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ CC = gcc
 FLAGS = -Wall -Werror -Wextra
 INC = libft.h	
 NAME = libft.a
-SRCS = ft_get_words.c\
+SRCS = ft_tabdel.c\
+	   ft_get_words.c\
 	   ft_isspace.c\
 	   ft_memset.c\
 	   ft_bzero.c\
@@ -75,7 +76,8 @@ SRCS = ft_get_words.c\
 	   ft_lstiter.c\
 	   ft_lstmap.c
 HDR = libft.h
-OBJS = ft_get_words.o\
+OBJS = ft_tabdel.o\
+	   ft_get_words.o\
 	   ft_isspace.o\
 	   ft_memset.o\
 	   ft_bzero.o\
